@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <link rel="stylesheet" href="homepage/style.css" />
+    <link rel="stylesheet" href="general.css" />
+  </head>
+  <body>
+    <section class="home-first-section">
+      <div class="navbar-placeholder"></div>
+      <div class="navbar">
+        <div class="logo">
+          <img class="burger-menu" src="img-general/icons/burger-menu.png" />
+          <a href="index.html">
+            <img src="img-general/logo.png" alt="logo" />
+            <p class="text-logo">GamePlex</p>
+          </a>
+        </div>
+        <nav class="center-nav-bar">
+          <div class="close-button-menu-toggle"></div>
+          <a href="index.html" id="active-link">Home</a>
+          <a href="categories/categories.html">Categories</a>
+          <a href="about-us/about-us.html">About us</a>
+          <a href="sign-up/sing-up.html">Sign Up</a>
+          <a href="login/login.html">Login</a>
+        </nav>
+        <div class="right-nav-bar">
+          <div class="input-container">
+            <img
+              src="img-general/icons/magnifying-glass.png"
+              alt="magnifying-glass"
+            />
+            <input type="text" placeholder="Search..." />
+          </div>
+          <a href="cart/cart.html">
+            <img src="img-general/icons/cart.png" alt="cart" class="cart-img" />
+          </a>
+          <a href="favourites/favourites.html">
+            <div class="heart-favourites">
+              <img
+                src="img-general/icons/heart-favourites.png"
+                alt="heart-favourites"
+              />
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="home-content-container">
+        <div class="main-text">
+          <div class="play-earn-enjoy-container">
+            <div class="orange-point"></div>
+            <p>Play</p>
+            <div class="orange-point"></div>
+            <p>Earn</p>
+            <div class="orange-point"></div>
+            <p>Enjoy</p>
+          </div>
+          <h1>ULTIMATE <span>GAMER'S</span> HAVEN</h1>
+          <a href="categories/categories.html">
+            <button class="rounded-button">Play now</button>
+          </a>
+        </div>
+        <img
+          src="homepage/img/mujic-img.png"
+          alt="mujic-img"
+          class="main-character-img-home"
+        />
+        <div class="top-rated-container">
+          <div class="top-rated-text">
+            <div class="orange-point"></div>
+            <p>Top Rated</p>
+          </div>
+          <div class="top-rated-games">
+            <div class="top-rated-game">
+              <img src="homepage/img/dota-2.png" alt="dota-2" />
+              <div class="games-text">
+                <p>Dota 2</p>
+                <p>&dollar;104.94</p>
+              </div>
+            </div>
+            <hr />
+            <div class="top-rated-game">
+              <img
+                src="homepage/img/monster-hunter-world.png"
+                alt="monster-hunter-world"
+              />
+              <div class="games-text">
+                <p>Monster Hunter: World</p>
+                <p>&dollar;49.98</p>
+              </div>
+            </div>
+            <hr />
+            <div class="top-rated-game">
+              <img src="homepage/img/dark-souls-III.png" alt="dark-souls-III" />
+              <div class="games-text">
+                <p>Dark Souls III</p>
+                <p>&dollar;24.99</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="carousel-rotate-section">
+      <div class="slider-container">
+        <div class="hi-prev">
+          <img src="homepage/img/slider/arrow.png" alt="arrow" />
+        </div>
+        <div class="slider">
+          <a href="individual-game/individual-game.html">
+            <div class="slide-container" data-id="1">
+              <img src="homepage/img/slider/sekiro.png" alt="sekiro" />
+              <h2>Sekiro</h2>
+              <div class="price-slide-container">
+                <div class="rating">
+                  <img src="img-general/star.png" alt="star" />
+                  <p>4,7</p>
+                </div>
+                <div class="price">
+                  <p>&dollar;31,99</p>
+                  <p>&dollar;15,99</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="individual-game/individual-game.html">
+            <div class="slide-container" data-id="2">
+              <img src="homepage/img/slider/wolong.png" alt="wolong" />
+              <h2>WoLong</h2>
+              <div class="price-slide-container">
+                <div class="rating">
+                  <img src="img-general/star.png" alt="star" />
+                  <p>4,5</p>
+                </div>
+                <div class="price">
+                  <p>&dollar;63,99</p>
+                  <p>&dollar;59,99</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="individual-game/individual-game.html">
+            <div class="slide-container far-near-active-slide" data-id="3">
+              <img
+                src="homepage/img/slider/manor-lords.png"
+                alt="manor-lords"
+              />
+              <h2>Manor Lords</h2>
+              <div class="price-slide-container">
+                <div class="rating">
+                  <img src="img-general/star.png" alt="star" />
+                  <p>4,8</p>
+                </div>
+                <div class="price">
+                  <p>&dollar;24,99</p>
+                  <p>&dollar;19,99</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="individual-game/individual-game.html">
+            <div class="slide-container near-active-slide" data-id="4">
+              <img src="homepage/img/slider/rain-world.png" alt="manor-lords" />
+              <h2>Rain World</h2>
+              <div class="price-slide-container">
+                <div class="rating">
+                  <img src="img-general/star.png" alt="star" />
+                  <p>4,7</p>
+                </div>
+                <div class="price">
+                  <p>&dollar;12,49</p>
+                  <p>&dollar;4,37</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="individual-game/individual-game.html">
+            <div class="slide-container active-slide-container" data-id="5">
+              <img
+                src="homepage/img/slider/battlefield.png"
+                alt="battlefield"
+              />
+              <h2>BattleField</h2>
+              <div class="price-slide-container">
+                <div class="rating">
+                  <img src="img-general/star.png" alt="star" />
+                  <p>4,8</p>
+                </div>
+                <div class="price">
+                  <p>&dollar;49,49</p>
+                  <p>&dollar;7,79</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="individual-game/individual-game.html">
+            <div class="slide-container near-active-slide" data-id="25">
+              <img src="homepage/img/slider/fallout-76.png" alt="fallout-76" />
+              <h2>Fallout 76</h2>
+              <div class="price-slide-container">
+                <div class="rating">
+                  <img src="img-general/star.png" alt="star" />
+                  <p>4,7</p>
+                </div>
+                <div class="price">
+                  <p>&dollar;22,98</p>
+                  <p>&dollar;19,99</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="individual-game/individual-game.html">
+            <div class="slide-container far-near-active-slide" data-id="19">
+              <img
+                src="homepage/img/slider/cyberpunk-2077.png"
+                alt="cyberpunk-2077"
+              />
+              <h2>Cyberpunk 2077</h2>
+              <div class="price-slide-container">
+                <div class="rating">
+                  <img src="img-general/star.png" alt="star" />
+                  <p>4,8</p>
+                </div>
+                <div class="price">
+                  <p>&dollar;29,99</p>
+                  <p>&dollar;14,99</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="individual-game/individual-game.html">
+            <div class="slide-container" data-id="26">
+              <img src="homepage/img/slider/elden-ring.png" alt="elden-ring" />
+              <h2>Elden Ring</h2>
+              <div class="price-slide-container">
+                <div class="rating">
+                  <img src="img-general/star.png" alt="star" />
+                  <p>4,7</p>
+                </div>
+                <div class="price">
+                  <p>&dollar;42,99</p>
+                  <p>&dollar;39,99</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="individual-game/individual-game.html">
+            <div class="slide-container" data-id="22">
+              <img src="homepage/img/slider/v-rising.png" alt="v-rising" />
+              <h2>V Rising</h2>
+              <div class="price-slide-container">
+                <div class="rating">
+                  <img src="img-general/star.png" alt="star" />
+                  <p>4,7</p>
+                </div>
+                <div class="price">
+                  <p>&dollar;16,49</p>
+                  <p>&dollar;14,84</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="hi-next">
+          <img src="homepage/img/slider/arrow.png" alt="arrow" />
+        </div>
+      </div>
+    </section>
+
+    <section class="latest-games-section">
+      <div class="padding-content">
+        <div class="article-title">
+          <div class="vertical-orange-line"></div>
+          <h1>Latest Games</h1>
+        </div>
+
+        <div class="list-carousel">
+          <div class="active-img">
+            <img
+              src="homepage/img/list-carousel/forza-horizon-5.png"
+              alt="forza-horizon-5"
+              class="selected-image"
+            />
+            <div class="info-game" data-id="6">
+              <h2>Forza Horizon 5</h2>
+              <div class="info-container">
+                <div class="rating-latest-games">
+                  <img src="img-general/star.png" alt="star" />
+                  <p>4,8</p>
+                </div>
+                <p class="active-img-price">&dollar;23,19</p>
+              </div>
+            </div>
+          </div>
+          <div class="list-games-carousel">
+            <div class="game-carousel active-little-img" data-id="6">
+              <img
+                src="homepage/img/list-carousel/forza-horizon-5.png"
+                alt="forza-horizon-5"
+              />
+              <h2>Forza Horizon 5</h2>
+            </div>
+            <div class="game-carousel" data-id="7">
+              <img
+                src="homepage/img/list-carousel/the-witcher-3-wild-hunt.png"
+                alt="the-witcher-3-wild-hunt"
+              />
+              <h2>The Witcher 3: Wild Hunt</h2>
+            </div>
+            <div class="game-carousel" data-id="8">
+              <img
+                src="homepage/img/list-carousel/marvels-spider-man-miles-morales.png"
+                alt="marvels-spider-man-miles-morales"
+              />
+              <h2>Marvel's Spider Man : Miles Morales</h2>
+            </div>
+            <div class="game-carousel" data-id="9">
+              <img
+                src="homepage/img/list-carousel/horizon-zero-down.png"
+                alt="horizon-zero-down"
+              />
+              <h2>Horizon: Zero Down</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories-section">
+      <div class="padding-content">
+        <h1 class="categories-text centred-title">Categories</h1>
+        <div class="grid-container">
+          <div class="grid-categories">
+            <a href="categories/action.html">
+              <div class="game-category">
+                <img src="homepage/img/categories/action.png" alt="action" />
+                <p>Action</p>
+              </div>
+            </a>
+            <a href="categories/fps.html">
+              <div class="game-category">
+                <img src="homepage/img/categories/FPS.png" alt="FPS" />
+                <p>FPS</p>
+              </div>
+            </a>
+            <a href="categories/sport.html">
+              <div class="game-category">
+                <img src="homepage/img/categories/sport.png" alt="sport" />
+                <p>Sport</p>
+              </div>
+            </a>
+            <a href="categories/simulation.html">
+              <div class="game-category">
+                <img
+                  src="homepage/img/categories/simulation.png"
+                  alt="simulation"
+                />
+                <p>Simulation</p>
+              </div>
+            </a>
+            <a href="categories/strategy.html">
+              <div class="game-category">
+                <img
+                  src="homepage/img/categories/strategy.png"
+                  alt="strategy"
+                />
+                <p>Strategy</p>
+              </div>
+            </a>
+            <a href="categories/fighting.html">
+              <div class="game-category">
+                <img
+                  src="homepage/img/categories/fighting.png"
+                  alt="fighting"
+                />
+                <p>Fighting</p>
+              </div>
+            </a>
+            <a href="categories/racing.html">
+              <div class="game-category">
+                <img src="homepage/img/categories/racing.png" alt="racing" />
+                <p>Racing</p>
+              </div>
+            </a>
+            <a href="categories/survival.html">
+              <div class="game-category">
+                <img
+                  src="homepage/img/categories/survival.png"
+                  alt="survival"
+                />
+                <p>Survival</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="orange-button-container">
+          <a href="categories/categories.html">
+            <button class="orange-button">View All</button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="popular-games-section">
+      <div class="gray-border-container padding-content-popular-games">
+        <div class="title-button-popular-games">
+          <div class="article-title">
+            <div class="vertical-orange-line"></div>
+            <h1 class="popular-games-title">Popular Games</h1>
+          </div>
+          <a href="categories/categories.html">
+            <button class="rounded-button">View More</button>
+          </a>
+        </div>
+        <div class="popular-games-container">
+          <div class="popular-game" data-id="10">
+            <img
+              class="popular-game-img"
+              src="homepage/img/popular-games/helldivers.png"
+              alt="helldivers"
+            />
+            <div class="info-popular-game">
+              <h2>Helldivers</h2>
+              <p>
+                Helldivers is a hardcore, cooperative, twin stick shooter. As
+                part of the elite unit called the HELLDIVERS, players must work
+                together to protect SUPER EARTH and defeat the enemies of
+                mankind in an intense intergalactic war.
+              </p>
+              <div class="price-arrow">
+                <p>&dollar;12,59</p>
+                <a href="individual-game/individual-game.html">
+                  <div class="arrow-button">
+                    <img src="homepage/img/arrow.png" alt="arrow" />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="popular-game" data-id="11">
+            <img
+              src="homepage/img/popular-games/gray-zone-warfare.png"
+              alt="gray-zone-warfare"
+            />
+            <div class="info-popular-game">
+              <h2>Gray Zone Warfare</h2>
+              <p>
+                Gray Zone Warfare is an tactical FPS emphasizing realism. Join a
+                Private Military Company to explore a vast MMO open world.
+                Strategize and survive against human operators and AI enemies
+                while uncovering the mystery of Lamang Island.
+              </p>
+              <div class="price-arrow">
+                <p>&dollar;16,49</p>
+                <a href="individual-game/individual-game.html">
+                  <div class="arrow-button">
+                    <img src="homepage/img/arrow.png" alt="arrow" />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="popular-game" data-id="12">
+            <img
+              src="homepage/img/popular-games/total-war-warhammer.png"
+              alt="total-war-warhammer"
+            />
+            <div class="info-popular-game">
+              <h2>Total War: WARHAMMER III</h2>
+              <p>
+                The cataclysmic conclusion to the Total War: WARHAMMER trilogy
+                is here. Rally your forces and step into the Realm of Chaos, a
+                dimension of mind-bending horror where the very fate of the
+                world will be decided.
+              </p>
+              <div class="price-arrow">
+                <p>&dollar;29,99</p>
+                <a href="individual-game/individual-game.html">
+                  <div class="arrow-button">
+                    <img src="homepage/img/arrow.png" alt="arrow" />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials-section">
+      <div class="padding-content">
+        <h1 class="centred-title">Testimonials</h1>
+        <div class="testimonials-container">
+          <div class="testimonial">
+            <img src="homepage/img/stars.png" alt="stars" />
+            <h2>Had the Best Experience!</h2>
+            <p>
+              The extensive library of games ensures I always find something new
+              and exciting to play. Downloading is quick and hassle-free, and
+              the exclusive discounts are a real bonus. Highly recommend!
+            </p>
+            <div class="testimonial-person">
+              <div>
+                <img
+                  src="homepage/img/testimonials/john-williams.png"
+                  alt="john-williams"
+                />
+                <div class="person-name-passion-container">
+                  <h4>John Williams</h4>
+                  <p>Gamer</p>
+                </div>
+              </div>
+              <img
+                src="homepage/img/testimonials/quatation.png"
+                alt="quatation"
+              />
+            </div>
+          </div>
+          <div class="testimonial">
+            <img src="homepage/img/stars.png" alt="stars" />
+            <h2>I highly recommend GamePlex!</h2>
+            <p>
+              Finding and purchasing my favorite games is a breeze. The regular
+              deals and discounts make it affordable to keep up with the latest
+              releases. Plus, the support team is super responsive and helpful.
+            </p>
+            <div class="testimonial-person">
+              <div>
+                <img
+                  src="homepage/img/testimonials/melissa-harvey.png"
+                  alt="melissa-harvey"
+                />
+                <div class="person-name-passion-container">
+                  <h4>Melissa Harvey</h4>
+                  <p>Gamer</p>
+                </div>
+              </div>
+              <img
+                src="homepage/img/testimonials/quatation.png"
+                alt="quatation"
+              />
+            </div>
+          </div>
+          <div class="testimonial">
+            <img src="homepage/img/stars.png" alt="stars" />
+            <h2>Had the Best Experience!</h2>
+            <p>
+              The early access to new games and beta testing opportunities keep
+              me ahead of the curve. I've discovered so many great games through
+              their recommendations and game hubs.
+            </p>
+            <div class="testimonial-person">
+              <div>
+                <img
+                  src="homepage/img/testimonials/harry-anderson.png"
+                  alt="harry-anderson"
+                />
+                <div class="person-name-passion-container">
+                  <h4>Harry Anderson</h4>
+                  <p>Gamer</p>
+                </div>
+              </div>
+              <img
+                src="homepage/img/testimonials/quatation.png"
+                alt="quatation"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="sign-container">
+        <div class="stay-up-to-date-container">
+          <div class="article-title">
+            <div class="vertical-orange-line"></div>
+            <h1>Sign up to date</h1>
+          </div>
+          <p>
+            Have questions or feedback? We'd love to hear from you. Reach out to
+            our team or use our contact form.
+          </p>
+        </div>
+        <div class="sign-input-container">
+          <input type="text" placeholder="Enter your email" id="orange-input" />
+          <div class="privacy-policy-container">
+            <div>
+              <div class="orange-big-circle"></div>
+              <p>
+                I agree with <span>Privacy Policy</span> and
+                <span>Terms & Conditions</span>
+              </p>
+            </div>
+            <a href="404/404.html">
+              <button class="orange-button">Submit</button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <hr class="footer-hr" />
+      <div class="contact-footer-container">
+        <div class="logo-link-copyright-container">
+          <div class="logo">
+            <a href="index.html">
+              <img src="img-general/logo.png" alt="logo" />
+              <p class="text-logo">GamePlex</p>
+            </a>
+          </div>
+          <div class="links">
+            <ul>
+              <li class="link-footer">
+                <a href="index.html"> Home </a>
+              </li>
+              <li class="link-footer">
+                <a href="categories/categories.html"> Categories </a>
+              </li>
+              <li class="link-footer">
+                <a href="about-us/about-us.html"> About us </a>
+              </li>
+              <li class="link-footer">
+                <a href="sign-up/sing-up.html"> Sign Up </a>
+              </li>
+              <li class="link-footer">
+                <a href="login/login.html"> Login </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="contact-info">
+          <h1>Contact Info</h1>
+          <a href="https://mail.google.com/mail/u/0/#inbox">
+            gameplex24@gmail.com
+          </a>
+        </div>
+        <div class="follow-us">
+          <h1>Follow us</h1>
+          <div class="social-medias">
+            <a href="https://www.instagram.com/">
+              <div class="social-media">
+                <img src="img-general/icons/instagram.png" alt="instagram" />
+              </div>
+            </a>
+            <a href="https://www.facebook.com/?locale=ro_RO">
+              <div class="social-media">
+                <img src="img-general/icons/facebook.png" alt="facebook" />
+              </div>
+            </a>
+            <a href="https://web.telegram.org/a/">
+              <div class="social-media">
+                <img src="img-general/icons/telegram.png" alt="telegram" />
+              </div>
+            </a>
+            <a href="https://www.youtube.com/">
+              <div class="social-media">
+                <img src="img-general/icons/youtube.png" alt="youtube" />
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <p class="copyright-text">Copyright &copy; 2024 GamePlex</p>
+    </section>
+    <script src="script.js"></script>
+    <script src="homepage/slider-games.js"></script>
+    <script type="module" src="homepage/list-games-carousel.js"></script>
+  </body>
+</html>

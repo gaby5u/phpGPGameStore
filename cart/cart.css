@@ -1,0 +1,237 @@
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6rem;
+  align-items: start;
+}
+
+.cart-products,
+.product-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  max-width: 50rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.options-container,
+.product-content,
+.summary-container,
+.pcss-container {
+  width: 100%;
+  background-color: var(--secondary-black);
+  border: 1px solid var(--secondary-gray);
+  padding: 1.75rem 2.6rem;
+  border-radius: 1.25rem;
+  justify-content: space-between;
+}
+
+.select-container,
+.remove-container,
+.product-content,
+.description-product,
+.sum-container,
+.banking-img,
+.pcss-container,
+.price-trash,
+.promo-code-container {
+  display: flex;
+  align-items: center;
+}
+
+.select-container,
+.product-content {
+  gap: 2rem;
+}
+
+.game-image {
+  width: 183px;
+  height: 183px;
+  object-fit: cover;
+}
+
+.remove-container p,
+.remove-container p span {
+  color: var(--primary-orange);
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.product-content {
+  align-items: start;
+}
+
+.description-product {
+  justify-content: space-between;
+  align-items: end;
+}
+
+.description-product p {
+  color: var(--font-color);
+  font-size: 1rem;
+}
+
+.description-product h1 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.price-trash,
+.remove-container,
+.sum-container {
+  justify-content: space-between;
+}
+
+.price-trash img,
+.remove-container img,
+.promo-text img {
+  cursor: pointer;
+}
+
+.price p:first-child {
+  text-decoration: line-through;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.price p:last-child {
+  font-size: 1.5rem;
+  color: var(--white);
+  font-weight: 600;
+  margin: 0;
+}
+
+.summary-payment-container {
+  max-width: 37rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.summary-payment-container h1 {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.summary-payment-container p,
+.payment h4,
+.payment h2 {
+  color: var(--font-color);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.promo-code-container {
+  justify-content: space-between;
+  display: none;
+}
+
+.promo-code-container input {
+  padding: 0.5rem;
+  color: var(--font-color);
+  border: 1px solid #444642;
+  font-size: 1rem;
+  background-color: var(--secondary-black);
+  border-radius: 0.5rem;
+}
+
+.promo-code-container input:focus-visible {
+  border: 1px solid var(--primary-orange);
+  outline: none;
+}
+
+#gray-button {
+  background-color: var(--font-color);
+  padding: 0.3rem 2rem;
+}
+
+.sum-container p {
+  color: #a8a8a8;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+#long-orange-button {
+  width: 100%;
+}
+
+.empty-cart-text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: start;
+  margin: 5px 0;
+}
+
+@keyframes slideLongOrangeButton {
+  0% {
+    width: 10px;
+  }
+  100% {
+    width: 500px;
+  }
+}
+
+#long-orange-button:hover::before {
+  animation: slideLongOrangeButton 0.7s;
+  animation-fill-mode: forwards;
+}
+
+.banking-img {
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.payment p {
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.pcss-container {
+  max-width: 16.3rem;
+  padding: 1.25rem 1rem;
+}
+
+@media screen and (max-width: 1400px) {
+  .container {
+    gap: 2rem;
+  }
+  .summary-payment-container h1 {
+    font-size: 2.5rem;
+  }
+  .description-product h1,
+  .price p:last-child {
+    font-size: 1.8rem;
+  }
+  .remove-container p,
+  .remove-container p span,
+  .price p:first-child {
+    font-size: 1.5rem;
+  }
+  .description-product p,
+  .summary-payment-container p,
+  .payment h4,
+  .payment h2 {
+    font-size: 1.5rem;
+  }
+  .pcss-container {
+    max-width: 25rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .product-content {
+    flex-wrap: wrap;
+    justify-content: start;
+    max-width: 35rem;
+  }
+  .options-container {
+    max-width: 35rem;
+  }
+}

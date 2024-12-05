@@ -1,0 +1,159 @@
+.game-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.game-image {
+  width: 34.6rem;
+  height: 40.7rem;
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+
+.text {
+  font-family: "Poppins", sans-serif;
+  max-width: 50rem;
+}
+
+.text p {
+  color: var(--font-color);
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.game-name {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.price p {
+  margin: 0;
+  margin-top: 1rem;
+}
+
+.price .initial-price,
+.price p:first-child {
+  font-size: 1.25rem;
+  text-decoration: line-through;
+}
+
+.price .final-price,
+.price p:last-child {
+  color: var(--primary-green);
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.price p:first-child {
+  color: var(--font-color);
+}
+
+.sku-genre-tags-container,
+.new-releases-cards-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+#long-orange-button {
+  width: 100%;
+}
+
+@keyframes slideLongOrangeButton {
+  0% {
+    width: 10px;
+  }
+  100% {
+    width: 1000px;
+  }
+}
+
+#long-orange-button:hover::before {
+  animation: slideLongOrangeButton 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.sku-genre-tags-container {
+  margin: 2rem 0;
+}
+
+.element-title-container {
+  font-weight: 700;
+}
+
+.description-container {
+  margin-top: 2rem;
+}
+
+.description-container p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  color: var(--font-color);
+  margin: 2rem 0;
+}
+
+.new-game {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-family: "Chakra Petch";
+  font-weight: 700;
+  letter-spacing: 0.36em;
+  color: var(--primary-green);
+  margin-top: 4rem;
+}
+
+.no-margin-h1 {
+  margin: 0;
+}
+
+.new-releases-cards-container {
+  align-items: start;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.new-release-game {
+  max-width: 16rem;
+}
+
+.new-release-game img {
+  object-fit: cover;
+  width: 16rem;
+  height: 15rem;
+  border-radius: 4px;
+}
+
+.text-release {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 14rem;
+}
+
+.text-release h2 {
+  font-family: "Chakra Petch";
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0.7rem 0;
+}
+
+.text-release p {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.mini-price p:last-child {
+  font-size: 1.5rem;
+}

@@ -1,0 +1,144 @@
+.sign-up-container {
+  width: 40%;
+  padding: 3.7rem 4rem;
+  border-radius: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--secondary-gray);
+  margin: 40px auto;
+}
+
+.sign-up-container h1 {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+}
+
+.using-social-networks-text {
+  font-size: 1.25rem;
+  color: var(--font-color);
+  text-align: center;
+}
+
+.social-networks,
+.gray-circle,
+.or {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-networks {
+  gap: 1.5rem;
+  margin: 20px 0;
+}
+
+.gray-circle {
+  width: 3.6rem;
+  height: 3.6rem;
+  background-color: var(--font-color);
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.gray-circle::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  background-color: var(--primary-orange);
+  bottom: 0;
+}
+
+@keyframes fillIcons {
+  0% {
+    height: 10%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+.gray-circle:hover::before {
+  animation: fillIcons 0.4s;
+  animation-fill-mode: forwards;
+}
+
+.gray-circle img {
+  width: 1.75rem;
+  height: auto;
+  z-index: 2;
+}
+
+.inputs {
+  text-align: center;
+}
+
+#orange-input {
+  margin: 0.6rem 0;
+  width: 90%;
+  padding: 1.5rem 2rem;
+  color: var(--font-color);
+  border: 1px solid #444642;
+  font-size: 1.25rem;
+  background-color: var(--secondary-black);
+  border-radius: 1rem;
+}
+
+.or {
+  gap: 1rem;
+}
+
+.or .line {
+  height: 1px;
+  width: 20px;
+  background-color: #a8a8a8;
+  width: 90%;
+}
+
+.or p {
+  font-size: 1rem;
+  color: #a8a8a8;
+  text-transform: uppercase;
+}
+
+.button-text {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.button-text input {
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.button-text p:last-child {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.button-text p span a {
+  color: var(--primary-orange);
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1620px) {
+  #orange-input {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .sign-up-container {
+    width: 70%;
+  }
+  #orange-input {
+    margin: 1rem 0;
+  }
+  .button-text p,
+  #orange-input {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,735 @@
+.home-first-section {
+  background-image: url(img/background-img.png);
+  height: 115vh;
+  position: relative;
+  background-repeat: no-repeat;
+}
+
+.home-content-container {
+  display: flex;
+  margin: 9rem 12.3%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 400px;
+}
+
+.play-earn-enjoy-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 700;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 1.5rem;
+}
+
+.play-earn-enjoy-container p {
+  margin: 0;
+}
+
+.main-text h1 {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 6rem;
+  font-weight: 700;
+  width: 25rem;
+  margin: 1rem 0;
+}
+
+.main-text h1 span {
+  color: var(--primary-orange);
+}
+
+.main-character-img-home {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 35%;
+}
+
+.top-rated-container {
+  max-width: 418px;
+  background: linear-gradient(42.01deg, #1c1e1a 44.2%, #242f1a 100%);
+  border-radius: 2rem;
+  padding: 2rem;
+  border: 1px solid #444642;
+}
+
+.top-rated-text,
+.top-rated-game {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.top-rated-text .orange-point {
+  width: 13px;
+  height: 13px;
+}
+
+.top-rated-text p {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.top-rated-games {
+  padding: 15px;
+}
+
+.top-rated-game p:first-child {
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: "Chakra Petch", sans-serif;
+  margin: 5px;
+}
+
+.top-rated-game p:last-child {
+  color: var(--primary-green);
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin: 5px;
+  font-size: 1.1rem;
+}
+
+.top-rated-games hr {
+  border: 1px solid #444642;
+  margin: 1.8rem 0;
+}
+
+/* ---------------------------------------slider--------------------------------------------- */
+
+.hi-prev,
+.hi-next {
+  width: 4.3rem;
+  height: 4.3rem;
+  border-radius: 50%;
+  border: 1px dashed var(--primary-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.hi-next::before,
+.hi-prev::before {
+  content: "";
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background-color: var(--primary-orange);
+  position: absolute;
+  top: 0;
+}
+
+.hi-prev::before {
+  left: 0;
+}
+
+.hi-next::before {
+  right: 0;
+}
+
+.hi-next:hover::before,
+.hi-prev:hover::before {
+  animation: scaleCircle 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.hi-next img,
+.hi-prev img {
+  z-index: 3;
+}
+
+@keyframes scaleCircle {
+  0% {
+    width: 10px;
+    height: 10px;
+  }
+  30% {
+    width: 15px;
+    height: 15px;
+  }
+  50% {
+    width: 25px;
+    height: 25px;
+  }
+  70% {
+    width: 50px;
+    height: 50px;
+  }
+  100% {
+    width: 4.3rem;
+    height: 4.3rem;
+  }
+}
+
+.hi-next img {
+  scale: -90%;
+}
+
+.carousel-rotate-section {
+  position: relative;
+  height: 500px;
+  z-index: 3;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1300px;
+  height: 650px;
+  overflow: hidden;
+  padding: 0;
+  margin: 0 20px;
+}
+
+.slider li {
+  list-style: none;
+}
+
+.slide-container {
+  background-color: var(--secondary-black);
+  border-radius: 1.5rem;
+  border: 1px solid #444642;
+  padding: 1.25rem;
+  padding-bottom: 40px;
+  cursor: pointer;
+  transition: transform 0.9s ease;
+}
+
+.slide-container img {
+  width: 18.8rem;
+  object-fit: cover;
+  border-radius: 2rem;
+}
+
+.slide-container h2 {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 20px;
+}
+
+.price-slide-container,
+.rating,
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+}
+
+.rating {
+  gap: 12px;
+}
+
+.price {
+  gap: 20px;
+}
+
+.price p:first-child {
+  text-decoration: line-through;
+}
+
+.price p:last-child {
+  color: var(--primary-green);
+}
+
+.rating img {
+  width: 28px;
+  height: 28px;
+}
+
+.price p,
+.rating p {
+  margin: 0;
+}
+
+.active-slide-container {
+  border: 1px solid var(--primary-orange);
+  position: relative;
+  transform: scale(1.2);
+  z-index: 3;
+}
+
+.near-active-slide {
+  transform: scale(1.1);
+  position: relative;
+  z-index: 2;
+}
+
+.far-near-active-slide {
+  transform: scale(1);
+  position: relative;
+  z-index: 1;
+}
+
+.rating img {
+  width: 28px;
+  height: 28px;
+}
+
+.price p,
+.rating p {
+  margin: 0;
+}
+
+/* ----------------------------------------latest-games------------------------------------- */
+
+.latest-games-section {
+  background-image: url(img/background-img-latest-games.png);
+  background-repeat: no-repeat;
+}
+
+.list-carousel,
+.game-carousel,
+.info-container,
+.rating-latest-games,
+.title-button-popular-games,
+.popular-games-container,
+.price-arrow,
+.arrow-button,
+.testimonials-container,
+.testimonial-person,
+.testimonial-person div:first-child {
+  display: flex;
+  align-items: center;
+}
+
+/* list-game-carousel */
+
+.list-carousel,
+.info-container {
+  gap: 1.25rem;
+}
+
+.active-img,
+.game-category {
+  position: relative;
+}
+
+.selected-image {
+  border-radius: 1.5rem;
+  width: 60rem;
+  height: 38rem;
+}
+
+.info-game {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 2.5rem;
+}
+
+.info-game h2 {
+  margin: 0;
+}
+
+@keyframes slideWhiteButton {
+  0% {
+    width: 10px;
+  }
+  100% {
+    width: 250px;
+  }
+}
+.rating-latest-games p,
+.active-img-price {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+}
+
+.list-games-carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.game-carousel {
+  padding: 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  gap: 20px;
+  width: 25rem;
+}
+
+.game-carousel:hover {
+  background: rgba(246, 87, 30, 0.49);
+  transition: all 0.5s;
+}
+
+.game-carousel img {
+  object-fit: cover;
+  border-radius: 10px;
+  width: 182px;
+  height: 118px;
+}
+
+.game-carousel h2 {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.active-little-img {
+  background: rgba(246, 87, 30, 0.49);
+}
+
+/* ---------------------------------------------categories------------------------------------ */
+
+.categories-section,
+.popular-games-section,
+.testimonials-section {
+  background-color: var(--primary-black);
+}
+
+.categories-text {
+  margin-top: 0;
+}
+
+.grid-container {
+  display: flex;
+  justify-content: center;
+}
+
+.grid-categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.game-category img,
+.game-category:hover {
+  border-radius: 6px;
+}
+
+.game-category {
+  width: 288px;
+  transition: all 0.5s;
+}
+
+.game-category:hover {
+  background-color: var(--primary-orange);
+}
+
+.game-category p {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.orange-button-container {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* ---------------------------------------popular-games--------------------------------------- */
+
+.gray-border-container {
+  border: 2px solid #444642;
+  border-radius: 4.3rem;
+  margin: 0 6rem;
+}
+
+.padding-content-popular-games {
+  padding: 4rem 7%;
+}
+
+.title-button-popular-games,
+.price-arrow,
+.popular-games-container,
+.testimonial-person {
+  justify-content: space-between;
+}
+
+.popular-games-title {
+  margin: 0;
+}
+
+.popular-games-container {
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+.popular-game {
+  width: 25rem;
+  background-color: var(--secondary-black);
+  border: 1px solid #444642;
+  text-align: center;
+  padding: 22px;
+  padding-bottom: 32px;
+}
+
+.popular-game img {
+  max-width: 22rem;
+}
+
+.popular-game:hover {
+  border: 1px solid var(--primary-orange);
+  transition: all 0.5s;
+}
+
+.popular-game:hover h2 {
+  color: var(--primary-orange);
+  transition: all 0.5s;
+}
+
+.popular-game img,
+.popular-game {
+  border-radius: 2rem;
+}
+
+.info-popular-game {
+  text-align: start;
+  font-family: "Poppins", sans-serif;
+}
+
+.info-popular-game h2,
+.info-game h2,
+.game-category p,
+.testimonial h2 {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.info-popular-game p,
+.testimonial p,
+.price p:first-child {
+  color: var(--font-color);
+}
+
+.price-arrow p {
+  color: var(--white);
+  font-size: 1.5rem;
+}
+
+.arrow-button {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: var(--primary-green);
+  justify-content: center;
+}
+
+.arrow-button:hover {
+  background-color: var(--primary-orange);
+  transition: all 0.5s;
+}
+
+.arrow-button:hover img {
+  transform: rotate(-45deg);
+  transition: all 0.5s;
+}
+/* --------------------------------------------testimonials----------------------------------- */
+
+.testimonials-container {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.testimonial {
+  width: 22rem;
+  background-color: var(--secondary-black);
+  border: 1px solid #444642;
+  border-radius: 1.5rem;
+  padding: 50px;
+  font-family: "Poppins", sans-serif;
+}
+
+.testimonial-person {
+  margin-top: 40px;
+}
+
+.testimonial-person div:first-child,
+.testimonials-container {
+  gap: 25px;
+}
+
+.person-name-passion-container h4 {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.person-name-passion-container p {
+  color: var(--primary-orange);
+  margin: 5px 0;
+}
+
+.testimonial-person img:last-child {
+  width: 3.5rem;
+  height: auto;
+}
+
+@media screen and (max-width: 1889px) {
+  .home-first-section {
+    background-image: url(img/background-img-1.png);
+  }
+  .list-carousel,
+  .list-games-carousel {
+    flex-wrap: wrap;
+  }
+  .list-games-carousel {
+    flex-direction: row;
+  }
+  .latest-games-section {
+    background-image: url(img/background-img-latest-games-1.png);
+  }
+}
+
+@media screen and (max-width: 1820px) {
+  .home-first-section {
+    background-image: url(img/background-img-2.png);
+  }
+  .main-character-img-home {
+    left: 53%;
+  }
+  .home-content-container {
+    margin: 6rem 12%;
+  }
+  .slider {
+    width: 1070px;
+  }
+  .testimonial {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .grid-categories {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .home-first-section {
+    height: auto;
+  }
+  .home-first-section {
+    background-color: var(--primary-black);
+    background-image: none;
+  }
+  .main-character-img-home {
+    display: none;
+  }
+  .home-content-container {
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+  .slider-container {
+    top: 0;
+  }
+  .slider {
+    width: 25.8rem;
+  }
+  .carousel-rotate-section {
+    height: 600px;
+  }
+  .latest-games-section {
+    background-image: none;
+  }
+  .selected-image {
+    width: 39rem;
+    height: auto;
+  }
+  .game-carousel {
+    width: auto;
+  }
+  .game-carousel h2 {
+    display: none;
+  }
+  .popular-game,
+  .popular-game img {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .grid-categories {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  /* 32px */
+  /* 25px */
+  .top-rated-text p,
+  .info-game h1,
+  .game-category p,
+  .info-popular-game h2,
+  .testimonial h2 {
+    font-size: 2.5rem;
+  }
+  /* 24px */
+  /* 18px */
+  .slide-container h2,
+  .testimonial p,
+  .person-name-passion-container h4,
+  .info-popular-game p {
+    font-size: 1.8rem;
+  }
+  /* 20px */
+
+  /* 16px */
+  /* 20px */
+  .top-rated-game p:first-child {
+    font-size: 2rem;
+  }
+  /* 12px */
+  /* 15px */
+  .top-rated-game p:last-child,
+  .price-slide-container p,
+  .rating-latest-games p,
+  .active-img-price,
+  .person-name-passion-container p {
+    font-size: 1.5rem;
+  }
+  .slider {
+    height: 450px;
+  }
+  .carousel-rotate-section {
+    height: 400px;
+  }
+  .rating-latest-games p,
+  .active-img-price p {
+    margin: 5px 0;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .list-games-carousel {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .game-category,
+  .game-category img {
+    width: 220px;
+  }
+  .popular-game,
+  .popular-game-img {
+    min-width: 25rem;
+  }
+}

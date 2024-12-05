@@ -1,0 +1,101 @@
+.favorites-container h1 {
+  margin-top: 4rem;
+}
+
+.favourites-cards {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  margin: 4rem 0;
+}
+
+.game-container {
+  position: relative;
+  width: 31rem;
+  font-family: "Poppins", sans-serif;
+  border-radius: 1.25rem;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.game-image {
+  object-fit: cover;
+  border-radius: 1.25rem;
+  width: 100%;
+  height: 20rem;
+}
+
+.empty-favourites-title {
+  font-family: "Poppins", sans-serif;
+}
+
+.text-description h1,
+.empty-favourites-title {
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: start;
+  margin: 5px 0;
+  margin-top: 1rem;
+}
+
+.text-description p {
+  color: var(--font-color);
+  font-size: 1rem;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.price p {
+  margin: 0;
+}
+
+.price p:first-child {
+  text-decoration: line-through;
+  font-size: 1.25rem;
+}
+
+.price p:last-child {
+  font-size: 1.5rem;
+  color: var(--primary-green);
+  font-weight: 500;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--secondary-gray);
+  width: 6.5rem;
+  height: 2.25rem;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+
+.rating img {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.rating p {
+  color: var(--white);
+  font-size: 16px;
+}
+
+@media screen and (max-width: 1400px) {
+  .text-description h1 {
+    font-size: 2.5rem;
+  }
+  .text-description p {
+    font-size: 1.5rem;
+  }
+  .price p:first-child,
+  .price p:last-child {
+    font-size: 1.8rem;
+  }
+}

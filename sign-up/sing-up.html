@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="sign-up.css" />
+    <link rel="stylesheet" href="../general.css" />
+  </head>
+  <body id="body">
+    <section>
+      <div class="navbar-placeholder"></div>
+      <div class="navbar">
+        <div class="logo">
+          <img class="burger-menu" src="../img-general/icons/burger-menu.png" />
+          <a href="../index.html">
+            <img src="../img-general/logo.png" alt="logo" />
+            <p class="text-logo">GamePlex</p>
+          </a>
+        </div>
+        <nav class="center-nav-bar">
+          <div class="close-button-menu-toggle"></div>
+          <a href="../index.html">Home</a>
+          <a href="../categories/categories.html">Categories</a>
+          <a href="../about-us/about-us.html">About us</a>
+          <a href="../sign-up/sing-up.html" id="active-link">Sign Up</a>
+          <a href="../login/login.html">Login</a>
+        </nav>
+        <div class="right-nav-bar">
+          <div class="input-container">
+            <img
+              src="../img-general/icons/magnifying-glass.png"
+              alt="magnifying-glass"
+            />
+            <input type="text" placeholder="Search..." />
+          </div>
+          <a href="../cart/cart.html">
+            <img
+              src="../img-general/icons/cart.png"
+              alt="cart"
+              class="cart-img"
+            />
+          </a>
+          <a href="../favourites/favourites.html">
+            <div class="heart-favourites">
+              <img
+                src="../img-general/icons/heart-favourites.png"
+                alt="heart-favourites"
+              />
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="sign-up-container">
+        <h1>Sign Up</h1>
+        <div class="inputs">
+          <form>
+            <input
+              type="text"
+              id="orange-input"
+              placeholder="Enter your name"
+              required
+            />
+            <input
+              type="text"
+              id="orange-input"
+              placeholder="Enter your username"
+              required
+            />
+            <input
+              type="number"
+              id="orange-input"
+              placeholder="Enter your phone"
+              required
+            />
+            <input
+              type="email"
+              id="orange-input"
+              placeholder="Enter your email"
+              required
+            />
+            <input
+              type="password"
+              id="orange-input"
+              placeholder="Enter your password"
+              required
+            />
+            <div class="button-text">
+              <a href="../404/404.html">
+                <input type="submit" class="orange-button" value="Sign Up" />
+              </a>
+              <p>
+                Already have an account?
+                <span><a href="../login/login.html">LogIn</a></span>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
