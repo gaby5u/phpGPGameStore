@@ -1,10 +1,10 @@
-import { games } from "./../object.js";
+import { fetchGames } from "../fetchGames.js";
 
 const cartGames = JSON.parse(localStorage.getItem("gamesToCart")) || [];
 const longOrangeButton = document.querySelector("#long-orange-button");
 
-const changeGameData = (gameId) => {
-  const game = games[gameId - 1];
+const changeGameData = (gameId, games) => {
+  const game = games.find((game) => Number(game.id) === Number(gameId));
   if (game) {
     document.querySelector(".game-image").src = game.image;
     document.querySelector(".game-name").textContent = game.name;
@@ -23,38 +23,49 @@ const changeGameData = (gameId) => {
   }
 };
 
-const gameId = localStorage.getItem("selectedGameId");
-document.addEventListener("DOMContentLoaded", () => {
-  if (gameId) {
-    changeGameData(gameId);
-  }
-  cartGames.forEach((cartGame) => {
-    if (cartGame.id == gameId) {
-      longOrangeButton.textContent = "Added to cart";
-    }
-  });
-});
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    const games = await fetchGames();
+    const gameId = localStorage.getItem("selectedGameId");
+    console.log(games);
 
-document.querySelectorAll(".new-game-button").forEach((button) => {
-  button.addEventListener("click", (event) => {
-    const newGameId = event.currentTarget.dataset.id;
-    localStorage.setItem("selectedGameId", newGameId);
-    changeGameData(newGameId);
-  });
+    if (gameId) {
+      changeGameData(gameId, games);
+    }
+
+    cartGames.forEach((cartGame) => {
+      if (cartGame.id == gameId) {
+        longOrangeButton.textContent = "Added to cart";
+      }
+    });
+
+    document.querySelectorAll(".new-game-button").forEach((button) => {
+      button.addEventListener("click", (event) => {
+        const newGameId = event.currentTarget.dataset.id;
+        localStorage.setItem("selectedGameId", newGameId);
+        changeGameData(newGameId, games);
+      });
+    });
+
+    longOrangeButton.addEventListener("click", () => {
+      const gameExists = cartGames.some(
+        (cartGame) => Number(cartGame.id) === Number(gameId)
+      );
+      longOrangeButton.textContent = "Added to cart";
+
+      if (!gameExists) {
+        const game = games.find((game) => game.id === Number(gameId));
+        if (game) {
+          cartGames.push(game);
+          saveCart(cartGames);
+        }
+      }
+    });
+  } catch (error) {
+    console.error("Error fetching games:", error);
+  }
 });
 
 const saveCart = (cartGames) => {
   localStorage.setItem("gamesToCart", JSON.stringify(cartGames));
 };
-
-longOrangeButton.addEventListener("click", () => {
-  const gameExists = cartGames.some(
-    (cartGame) => Number(cartGame.id) === Number(gameId)
-  );
-  longOrangeButton.textContent = "Added to cart";
-
-  if (!gameExists) {
-    cartGames.push(games[gameId - 1]);
-    saveCart(cartGames);
-  }
-});

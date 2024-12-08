@@ -1,4 +1,4 @@
-import { games } from "../object.js";
+import { fetchGames } from "../fetchGames.js";
 
 const gameContainer = document.querySelectorAll(".game-container");
 const gameNames = document.querySelectorAll(".text-description h1");
@@ -7,7 +7,7 @@ const gameImage = document.querySelectorAll(".game-image");
 const gameInitialPrice = document.querySelectorAll(".price p:first-child");
 const gameFinalPrice = document.querySelectorAll(".price p:last-child");
 
-const setGameData = () => {
+const setGameData = (games) => {
   gameContainer.forEach((container, index) => {
     const gameId = container.getAttribute("data-id");
     games.forEach((game) => {
@@ -22,4 +22,20 @@ const setGameData = () => {
   });
 };
 
-setGameData();
+const initializaGameData = async () => {
+  try {
+    const games = await fetchGames();
+    setGameData(games);
+  } catch (error) {
+    console.error("Failed to fetch or display data:", error);
+  }
+};
+
+initializaGameData();
+
+gameContainer.forEach((container) => {
+  container.addEventListener("click", (event) => {
+    const gameId = event.currentTarget.dataset.id;
+    localStorage.setItem("selectedGameId", gameId);
+  });
+});
