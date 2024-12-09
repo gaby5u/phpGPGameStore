@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   try {
     const games = await fetchGames();
     const gameId = localStorage.getItem("selectedGameId");
-    console.log(games);
 
     if (gameId) {
       changeGameData(gameId, games);
@@ -54,7 +53,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       longOrangeButton.textContent = "Added to cart";
 
       if (!gameExists) {
-        const game = games.find((game) => game.id === Number(gameId));
+        const game = games.find((game) => Number(game.id) === Number(gameId));
         if (game) {
           cartGames.push(game);
           saveCart(cartGames);

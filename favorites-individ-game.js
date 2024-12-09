@@ -1,9 +1,12 @@
 // -------------------------individual-game---favorites-----------------------------
 
-import { games } from "./object.js";
+import { fetchGames } from "./fetchGames.js";
 
-document.addEventListener("DOMContentLoaded", () => {
-  updateFavoriteIcons();
+document.addEventListener("DOMContentLoaded", async () => {
+  const games = await fetchGames();
+  updateFavoriteIcons(games);
+  setupGameContainers(games);
+  setupHeartIcons(games);
 });
 
 const getFavorites = () => {
@@ -29,30 +32,34 @@ const updateFavoriteIcons = () => {
   });
 };
 
-document.querySelectorAll(".game-container").forEach((gameItem) => {
-  gameItem.addEventListener("click", (event) => {
-    const gameId = event.currentTarget.dataset.id;
-    localStorage.setItem("selectedGameId", gameId);
+const setupGameContainers = () => {
+  document.querySelectorAll(".game-container").forEach((gameItem) => {
+    gameItem.addEventListener("click", (event) => {
+      const gameId = event.currentTarget.dataset.id;
+      localStorage.setItem("selectedGameId", gameId);
+    });
   });
-});
+};
 
-document.querySelectorAll(".white-circle div").forEach((heartIcon, index) => {
-  heartIcon.addEventListener("click", () => {
-    heartIcon.classList.toggle("toggled");
+const setupHeartIcons = (games) => {
+  document.querySelectorAll(".white-circle div").forEach((heartIcon, index) => {
+    heartIcon.addEventListener("click", () => {
+      heartIcon.classList.toggle("toggled");
 
-    const containersGames = document.querySelectorAll(".game-container");
-    const gameId =
-      parseInt(containersGames[index].getAttribute("data-id"), 10) - 1;
-    const favorites = getFavorites();
+      const containersGames = document.querySelectorAll(".game-container");
+      const gameId =
+        parseInt(containersGames[index].getAttribute("data-id"), 10) - 1;
+      const favorites = getFavorites();
 
-    if (heartIcon.classList.contains("toggled")) {
-      favorites.push(games[gameId]);
-      saveFavorites(favorites);
-    } else {
-      const updatedFavorites = favorites.filter(
-        (game) => game.id !== games[gameId].id
-      );
-      saveFavorites(updatedFavorites);
-    }
+      if (heartIcon.classList.contains("toggled")) {
+        favorites.push(games[gameId]);
+        saveFavorites(favorites);
+      } else {
+        const updatedFavorites = favorites.filter(
+          (game) => game.id !== games[gameId].id
+        );
+        saveFavorites(updatedFavorites);
+      }
+    });
   });
-});
+};

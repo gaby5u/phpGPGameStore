@@ -1,6 +1,25 @@
-import { games } from "./../object.js";
+import { fetchGames } from "../fetchGames.js";
 
 let cartGames = JSON.parse(localStorage.getItem("gamesToCart")) || [];
+
+let games = [];
+
+const fetchData = async () => {
+  try {
+    games = await fetchGames();
+    checkIfCartIsEmpty();
+    cartGames.forEach((cartGame) => {
+      const gameId = Number(cartGame.id);
+      createCard(gameId);
+    });
+    updateTotalNumberElements();
+    updateTotalPrice();
+    deleteCartGame();
+    deleteAllCartGames();
+  } catch (error) {
+    console.error("Error fetching games:", error);
+  }
+};
 
 const checkIfCartIsEmpty = () => {
   if (cartGames.length == 0) {
@@ -14,7 +33,6 @@ const checkIfCartIsEmpty = () => {
     document.querySelector(".summary-payment-container").style.display = "none";
   }
 };
-checkIfCartIsEmpty();
 
 const createCard = (gameId) => {
   const productContanier = document.createElement("div");
@@ -56,11 +74,11 @@ const createCard = (gameId) => {
   price.classList.add("price");
 
   const initialPrice = document.createElement("p");
-  initialPrice.innerHTML = `&dollar; ${games[gameId - 1].initialPrice}`;
+  initialPrice.innerHTML = `$ ${games[gameId - 1].initialPrice}`;
   price.appendChild(initialPrice);
 
   const finalPrice = document.createElement("p");
-  finalPrice.innerHTML = `&dollar; ${games[gameId - 1].finalPrice}`;
+  finalPrice.innerHTML = `$ ${games[gameId - 1].finalPrice}`;
   price.appendChild(finalPrice);
 
   priceTrash.appendChild(price);
@@ -78,11 +96,6 @@ const createCard = (gameId) => {
   const cartProducts = document.querySelector(".cart-products");
   cartProducts.appendChild(productContanier);
 };
-
-cartGames.forEach((cartGame) => {
-  const gameId = cartGame.id;
-  createCard(gameId);
-});
 
 const updateTotalNumberElements = () => {
   let numberElements = document.querySelector(".remove-container p span");
@@ -102,7 +115,9 @@ const deleteCartGame = () => {
       const gameId = parseInt(productContanier.dataset.id, 10);
       productContanier.remove();
 
-      const gameIndex = cartGames.findIndex((game) => game.id === gameId);
+      const gameIndex = cartGames.findIndex(
+        (game) => Number(game.id) === gameId
+      );
       if (gameIndex > -1) cartGames.splice(gameIndex, 1);
       saveCartGames();
       updateTotalNumberElements();
@@ -110,9 +125,6 @@ const deleteCartGame = () => {
     });
   });
 };
-
-deleteCartGame();
-updateTotalNumberElements();
 
 const deleteAllCartGames = () => {
   const deleteAllTrashButton = document.querySelector(".remove-container img");
@@ -128,20 +140,16 @@ const deleteAllCartGames = () => {
   });
 };
 
-deleteAllCartGames();
-
 const updateTotalPrice = () => {
   const totalPriceText = document.querySelector(".sum-container p:last-child");
   const buttonText = document.getElementById("long-orange-button");
   let summary = 0;
   cartGames.forEach((cartGame) => {
-    summary += cartGame.finalPrice;
+    summary += Number(cartGame.finalPrice);
   });
-  totalPriceText.innerHTML = `&dollar;${summary.toFixed(2)}`;
-  buttonText.innerHTML = `Buy for &dollar;${summary.toFixed(2)}`;
+  totalPriceText.innerHTML = `$${summary.toFixed(2)}`;
+  buttonText.innerHTML = `Buy for $${summary.toFixed(2)}`;
 };
-
-updateTotalPrice();
 
 const promoTextIcon = document.querySelector(".promo-text img");
 const promoCodeContainer = document.querySelector(".promo-code-container");
@@ -157,3 +165,5 @@ promoTextIcon.addEventListener("click", () => {
     promoTextIcon.style.transform = "rotate(0deg)";
   }
 });
+
+fetchData();
