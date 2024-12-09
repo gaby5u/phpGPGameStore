@@ -52,44 +52,52 @@
         </div>
       </div>
 
-      <div class="sign-up-container">
+      <form
+        action="../authentication/sign-up.php"
+        method="post"
+        name="sign-up"
+        class="sign-up-container"
+      >
         <h1>Sign Up</h1>
         <div class="inputs">
           <form>
             <input
               type="text"
+              name="name"
               id="orange-input"
               placeholder="Enter your name"
               required
             />
             <input
               type="text"
+              name="username"
               id="orange-input"
               placeholder="Enter your username"
               required
             />
             <input
               type="number"
+              name="phone"
               id="orange-input"
               placeholder="Enter your phone"
               required
             />
             <input
               type="email"
+              name="email"
               id="orange-input"
               placeholder="Enter your email"
               required
             />
             <input
               type="password"
+              name="password"
               id="orange-input"
               placeholder="Enter your password"
               required
             />
             <div class="button-text">
-              <a href="../404/404.html">
-                <input type="submit" class="orange-button" value="Sign Up" />
-              </a>
+              <input type="submit" class="orange-button" value="Sign Up" />
               <p>
                 Already have an account?
                 <span><a href="../login/login.html">LogIn</a></span>
@@ -97,9 +105,10 @@
             </div>
           </form>
         </div>
-      </div>
+      </form>
     </section>
 
     <script src="../script.js"></script>
+    <script src="sign-up.js"></script>
   </body>
 </html>
