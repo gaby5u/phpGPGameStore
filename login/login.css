@@ -1,4 +1,4 @@
-.sign-up-container {
+.login-container {
   width: 40%;
   padding: 3.7rem 4rem;
   border-radius: 1.5rem;
@@ -7,7 +7,7 @@
   margin: 40px auto;
 }
 
-.sign-up-container h1 {
+.login-container h1 {
   font-family: "Chakra Petch", sans-serif;
   font-size: 3rem;
   font-weight: 700;
@@ -131,7 +131,7 @@
 }
 
 @media screen and (max-width: 1400px) {
-  .sign-up-container {
+  .login-container {
     width: 70%;
   }
   #orange-input {
