@@ -32,7 +32,7 @@ if ($email === "admin@gmail.com" && $password === "gaby-Admin123") {
 
   echo "<script>
       alert('Welcome Gaby Admin!');
-      window.location.href = window.location.origin + '/GPGameStore/CRUD.html';
+      window.location.href = window.location.origin + '/GPGameStore/CRUD/CRUD.php';
   </script>";
   exit;
 }
